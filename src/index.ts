@@ -1,2 +1,4 @@
-import { validateSchema } from "./validator";
-export { validateSchema };
+import { Validator } from './validator';
+import { ValidationResult } from './type/schema';
+
+export { Validator, ValidationResult };
