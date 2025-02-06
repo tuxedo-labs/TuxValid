@@ -1,11 +1,24 @@
 {
   "compilerOptions": {
-    "module": "ESNext",
-    "target": "ESNext",
-    "moduleResolution": "node",
-    "esModuleInterop": true,
-    "skipLibCheck": true
+    "target": "ES6",                    // Keep ES6 for modern JS support
+    "module": "CommonJS",                // CommonJS is a good default for Node.js
+    "declaration": true,                 // Generates .d.ts declaration files
+    "outDir": "./dist",                  // Output directory for compiled files
+    "strict": true,                      // Enable all strict type-checking options
+    "esModuleInterop": true,             // Enables interoperability between CommonJS and ES Modules
+    "skipLibCheck": true,                // Skips type checking of declaration files for faster compilation
+    "forceConsistentCasingInFileNames": true, // Ensures consistent casing in file names
+    "moduleResolution": "node",          // Ensures proper module resolution for Node.js environments
+    "resolveJsonModule": true,           // Allows importing JSON files as modules (optional)
+    "noEmit": true                       // Prevents emitting output when using `ts-node`
   },
-  "include": ["src/**/*.ts"]
+  "include": [
+    "src/**/*.ts",                       // Include all TypeScript files in src folder
+    "test.ts"                            // Include your test.ts file
+  ],
+  "exclude": [
+    "node_modules",                      // Exclude node_modules from being compiled
+    "dist"                               // Exclude dist folder if it exists
+  ]
 }
 
