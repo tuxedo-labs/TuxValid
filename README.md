@@ -16,10 +16,6 @@ After installation, you can use the Validator class to validate your data agains
 
 Example:
 ```typescript
-Import the Validator class:
-typescript
-Copy
-Edit
 import { Validator } from '@tuxedolabs/tuxvalid';
 Define your JSON Schema:
 typescript
